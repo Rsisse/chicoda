@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Questions>
+  <Question numQuest="1">
+    <ennonce>Quel est la taille d'un neuronne</ennonce>
+    <reponse1>35430</reponse1>
+    <reponse2>23</reponse2>
+    <reponse3>Aucune des réponses!</reponse3>
+    <correct>3</correct>
+  </Question>
+  <Question numQuest="2">
+    <ennonce>Quel est la taille d'un arbre</ennonce>
+    <reponse1>20m</reponse1>
+    <reponse2>Ca dépend de l'arbre</reponse2>
+    <reponse3>34m</reponse3>
+    <correct>2</correct>
+  </Question>
+  
+  
+</Questions>
