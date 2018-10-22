@@ -5,18 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-<<<<<<< HEAD
-namespace TestXML
-=======
 namespace Questionnaire
->>>>>>> a2570b8007fb10ab4218bf7192831364793faaee
 {
     class Question
     {
-        private string Ennonce { get; set; }
-        private List<string> Reponses { get; set; }
+        public string Ennonce { get; private set; }
+        public List<string> Reponses { get; private set; }
 
-        private string ReponseCorrect { get; set; }
+        public string ReponseCorrect { get; private set; }
 
         public Question(): this("",new List<string>(),"") { }
   
@@ -46,11 +42,7 @@ namespace Questionnaire
         {
             List<Question> list = new List<Question>();
             var xml = XDocument.Load("Questions.Xml");
-<<<<<<< HEAD
-            for (int numQuest = 1; numQuest < 3; numQuest++)
-=======
             for (int numQuest = 1; numQuest < 19; numQuest++)
->>>>>>> a2570b8007fb10ab4218bf7192831364793faaee
             {
                 var query = from c in xml.Root.Descendants("Question")
                             where (int)c.Attribute("numQuest") == numQuest

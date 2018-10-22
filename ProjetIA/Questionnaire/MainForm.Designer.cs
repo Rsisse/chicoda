@@ -30,12 +30,13 @@
         {
             this.lbl_Question = new System.Windows.Forms.Label();
             this.grpBox_1 = new System.Windows.Forms.GroupBox();
+            this.radBtn_Rep3 = new System.Windows.Forms.RadioButton();
             this.radBtn_Rep2 = new System.Windows.Forms.RadioButton();
             this.radBtn_Rep1 = new System.Windows.Forms.RadioButton();
             this.labelEnnoncé = new System.Windows.Forms.Label();
             this.labelModifier = new System.Windows.Forms.Label();
-            this.radBtn_Rep3 = new System.Windows.Forms.RadioButton();
             this.buttonValider = new System.Windows.Forms.Button();
+            this.labelTest = new System.Windows.Forms.Label();
             this.grpBox_1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +61,17 @@
             this.grpBox_1.TabIndex = 1;
             this.grpBox_1.TabStop = false;
             this.grpBox_1.Text = "Réponses";
+            // 
+            // radBtn_Rep3
+            // 
+            this.radBtn_Rep3.AutoSize = true;
+            this.radBtn_Rep3.Location = new System.Drawing.Point(33, 113);
+            this.radBtn_Rep3.Name = "radBtn_Rep3";
+            this.radBtn_Rep3.Size = new System.Drawing.Size(51, 17);
+            this.radBtn_Rep3.TabIndex = 4;
+            this.radBtn_Rep3.TabStop = true;
+            this.radBtn_Rep3.Text = "Rep3";
+            this.radBtn_Rep3.UseVisualStyleBackColor = true;
             // 
             // radBtn_Rep2
             // 
@@ -103,17 +115,6 @@
             this.labelModifier.TabIndex = 3;
             this.labelModifier.Text = "Qmodifier";
             // 
-            // radBtn_Rep3
-            // 
-            this.radBtn_Rep3.AutoSize = true;
-            this.radBtn_Rep3.Location = new System.Drawing.Point(33, 113);
-            this.radBtn_Rep3.Name = "radBtn_Rep3";
-            this.radBtn_Rep3.Size = new System.Drawing.Size(51, 17);
-            this.radBtn_Rep3.TabIndex = 4;
-            this.radBtn_Rep3.TabStop = true;
-            this.radBtn_Rep3.Text = "Rep3";
-            this.radBtn_Rep3.UseVisualStyleBackColor = true;
-            // 
             // buttonValider
             // 
             this.buttonValider.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,12 +124,23 @@
             this.buttonValider.TabIndex = 4;
             this.buttonValider.Text = "Valider";
             this.buttonValider.UseVisualStyleBackColor = true;
+            this.buttonValider.Click += new System.EventHandler(this.buttonValider_Click);
+            // 
+            // labelTest
+            // 
+            this.labelTest.AutoSize = true;
+            this.labelTest.Location = new System.Drawing.Point(96, 186);
+            this.labelTest.Name = "labelTest";
+            this.labelTest.Size = new System.Drawing.Size(35, 13);
+            this.labelTest.TabIndex = 5;
+            this.labelTest.Text = "label1";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 482);
+            this.Controls.Add(this.labelTest);
             this.Controls.Add(this.buttonValider);
             this.Controls.Add(this.labelModifier);
             this.Controls.Add(this.labelEnnoncé);
@@ -153,6 +165,7 @@
         private System.Windows.Forms.Label labelEnnoncé;
         private System.Windows.Forms.Label labelModifier;
         private System.Windows.Forms.Button buttonValider;
+        private System.Windows.Forms.Label labelTest;
     }
 }
 

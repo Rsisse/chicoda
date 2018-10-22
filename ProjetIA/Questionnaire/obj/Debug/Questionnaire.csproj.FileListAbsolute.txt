@@ -7,3 +7,4 @@ H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.Properties
 H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.csproj.GenerateResource.Cache
 H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.exe
 H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.pdb
+H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.FinPartie.resources
