@@ -13,46 +13,21 @@ namespace Questionnaire
 {
     public partial class MainForm : Form
     {
-        Dictionary<string, List<string>> dico;
+        private List<Question> listeQuestions;
+        private List<int> ListeIndex;
+        private Random r;
         public MainForm()
         {
             InitializeComponent();
-            dico = new Dictionary<string, List<string>>();
-            InitLabel();
+            listeQuestions = Question.CreateListQuestions();
+            r = new Random();
+            for(int i=0;i<20;i++)
+            {
+                int rand = r.Next(0, 20);
+                
+            }
+           
+            
         }
-
-        private void InitLabel()
-        {
-            XmlTextReader reader = new XmlTextReader("Questions.xml");
-            int count = 0;
-            while (reader.Read() && count!=1)
-            { 
-                switch (reader.NodeType)
-                {
-                    case XmlNodeType.Element: // The node is an element.
-
-                        while (reader.MoveToNextAttribute()) // Read the attributes.
-                            Console.Write(" " + reader.Name + "='" + reader.Value + "'");
-                        break;
-                    case XmlNodeType.Text: //Display the text in each element.
-                        lbl_Question.Text = reader.Value;
-                        count++;
-
-                        break;
-                    case XmlNodeType.EndElement: //Display the end of the element.
-
-                        break;
-                }
-        }
-        }
-    
-
-
-
-    
-
-
-
-
 }
 }
