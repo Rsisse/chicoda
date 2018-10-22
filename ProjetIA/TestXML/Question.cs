@@ -42,7 +42,7 @@ namespace TestXML
         {
             List<Question> list = new List<Question>();
             var xml = XDocument.Load("Questions.Xml");
-            for (int numQuest = 1; numQuest < 3; numQuest++)
+            for (int numQuest = 1; numQuest < 19; numQuest++)
             {
                 var query = from c in xml.Root.Descendants("Question")
                             where (int)c.Attribute("numQuest") == numQuest

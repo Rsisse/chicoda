@@ -15,8 +15,9 @@ namespace TestXML
 
         static void Main(string[] args)
         {
+            Random r = new Random();
             List<Question> maListe = Question.CreateListQuestions();
-
+            maListe = maListe.OrderBy(x => r.Next(0,5)).ToList();
             foreach (var item in maListe)
             {
                 Console.WriteLine(item);

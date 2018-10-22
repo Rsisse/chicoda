@@ -5,3 +5,9 @@ C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.csprojRe
 C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.csproj.CoreCompileInputs.cache
 C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.exe
 C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.pdb
+H:\2A\IA\Projet\ProjetChicoda\chicoda\ProjetIA\TestXML\bin\Debug\TestXML.exe.config
+H:\2A\IA\Projet\ProjetChicoda\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.exe
+H:\2A\IA\Projet\ProjetChicoda\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.pdb
+H:\2A\IA\Projet\ProjetChicoda\chicoda\ProjetIA\TestXML\bin\Debug\TestXML.exe
+H:\2A\IA\Projet\ProjetChicoda\chicoda\ProjetIA\TestXML\bin\Debug\TestXML.pdb
+H:\2A\IA\Projet\ProjetChicoda\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.csprojResolveAssemblyReference.cache

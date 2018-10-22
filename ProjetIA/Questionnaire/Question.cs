@@ -5,7 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
+<<<<<<< HEAD
 namespace TestXML
+=======
+namespace Questionnaire
+>>>>>>> a2570b8007fb10ab4218bf7192831364793faaee
 {
     class Question
     {
@@ -42,7 +46,11 @@ namespace TestXML
         {
             List<Question> list = new List<Question>();
             var xml = XDocument.Load("Questions.Xml");
+<<<<<<< HEAD
             for (int numQuest = 1; numQuest < 3; numQuest++)
+=======
+            for (int numQuest = 1; numQuest < 19; numQuest++)
+>>>>>>> a2570b8007fb10ab4218bf7192831364793faaee
             {
                 var query = from c in xml.Root.Descendants("Question")
                             where (int)c.Attribute("numQuest") == numQuest
