@@ -78,6 +78,7 @@
             // 
             // buttonQuitter
             // 
+            this.buttonQuitter.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonQuitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonQuitter.Location = new System.Drawing.Point(103, 219);
             this.buttonQuitter.Name = "buttonQuitter";

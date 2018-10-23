@@ -8,3 +8,4 @@ H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.csproj.Gen
 H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.exe
 H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.pdb
 H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.FinPartie.resources
+H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.Menu.resources

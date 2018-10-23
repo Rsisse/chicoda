@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace Questionnaire
 {
-    public partial class FinPartie : Form
+    public partial class Menu : Form
     {
-        private int score;
-        public FinPartie(int score)
+        public Menu()
         {
-            this.score = score;
             InitializeComponent();
-            labelScore.Text = score.ToString();
         }
 
-        private void buttonRecommencer_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-           
+
         }
 
-        private void buttonQuitter_Click(object sender, EventArgs e)
+        private void buttonCommencer_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            MainForm form = new MainForm();
+            form.ShowDialog();
+
         }
     }
 }

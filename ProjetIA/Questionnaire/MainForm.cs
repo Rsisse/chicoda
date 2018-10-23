@@ -38,7 +38,7 @@ namespace Questionnaire
         private void buttonValider_Click(object sender, EventArgs e)
         {
             
-                foreach (RadioButton RB in grpBox_1.Controls)
+            foreach (RadioButton RB in grpBox_1.Controls)
             {
                 if (RB.Checked == true)
                 {
@@ -69,7 +69,7 @@ namespace Questionnaire
                 }
                 else
                 {
-                    this.Close();
+                    Application.Exit();
                 } 
 
             }
