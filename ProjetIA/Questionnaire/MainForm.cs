@@ -18,7 +18,7 @@ namespace Questionnaire
         private List<Question> listeQuestions;
         public int score = 0;
         int verifReponse=0;
-        private int indice = 1;
+        private int indice = 0;
         private Random r;
         public MainForm()
         {
@@ -49,12 +49,14 @@ namespace Questionnaire
 
             if (indice<17)
             {
+                
                 labelModifier.Text = listeQuestions[indice].Ennonce;
                 radBtn_Rep1.Text = listeQuestions[indice].Reponses[0];
                 radBtn_Rep2.Text = listeQuestions[indice].Reponses[1];
                 radBtn_Rep3.Text = listeQuestions[indice].Reponses[2];
                 indice++;
                 lbl_Question.Text = "Question " + indice + "/20";
+                
             }
 
             else
@@ -78,7 +80,7 @@ namespace Questionnaire
         {
           //labelTest.Text = "Reponse correcte: " + listeQuestions[indice].ReponseCorrect[0] + " score: " + score + " checkedButton: " + verifReponse;
            
-            if (verifReponse == listeQuestions[indice].ReponseCorrect[0])
+            if (verifReponse.Equals(Convert.ToInt32(listeQuestions[indice].ReponseCorrect)))
             {
                 score += 1;
             }

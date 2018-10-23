@@ -43,7 +43,7 @@
     <correct>1</correct>
   </Question>
   <Question numQuest="7">
-    <ennonce>Pour le jeu du taquin, quel algorithme est le plus pertinent?</ennonce>
+    <ennonce>Test de Turing: en quoi cela consiste ?</ennonce>
     <reponse1>Il consiste à mesurer la capacité de réflexion d’un ordinateur</reponse1>
     <reponse2>Il consiste à mesurer les performances d’un robot</reponse2>
     <reponse3>Il consiste à mesurer les performances cognitives d’un humain</reponse3>

@@ -8,4 +8,18 @@ H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.csproj.Gen
 H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.exe
 H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.pdb
 H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.FinPartie.resources
+<<<<<<< HEAD
 H:\Année 2\IA\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.Menu.resources
+=======
+C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\Questionnaire\bin\Debug\Questionnaire.exe.config
+C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\Questionnaire\bin\Debug\Questionnaire.exe
+C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\Questionnaire\bin\Debug\Questionnaire.pdb
+C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.csprojResolveAssemblyReference.cache
+C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.FinPartie.resources
+C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.MainForm.resources
+C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.Properties.Resources.resources
+C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.csproj.GenerateResource.Cache
+C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.csproj.CoreCompileInputs.cache
+C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.exe
+C:\Users\Enzo\Documents\ENSC\chicoda\ProjetIA\Questionnaire\obj\Debug\Questionnaire.pdb
+>>>>>>> 9bca5ba0302636200def6f5b52ac4b3b02fd563c
