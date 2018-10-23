@@ -17,7 +17,7 @@ namespace Questionnaire
         //git add * git commit -m '...' git push -u origin master
         private List<Question> listeQuestions;
         private int score = 0;
-        int verifReponse;
+        int verifReponse=0;
         private int indice = 1;
         private Random r;
         public MainForm()
@@ -30,19 +30,22 @@ namespace Questionnaire
             radBtn_Rep1.Text = listeQuestions[0].Reponses[0];
             radBtn_Rep2.Text = listeQuestions[0].Reponses[1];
             radBtn_Rep3.Text = listeQuestions[0].Reponses[2];
+            labelTest.Text = listeQuestions[indice].ReponseCorrect[0].ToString() + " score: " + score + " checkedButton: " + verifReponse;
             lbl_Question.Text = "Question "+indice+"/20";
             
         }
 
         private void buttonValider_Click(object sender, EventArgs e)
         {
-            RadioButton checkedButton = this.Controls.OfType<RadioButton>()
-                                     .FirstOrDefault(r => r.Checked);
-            labelTest.Text = listeQuestions[indice].ReponseCorrect[0].ToString()+"score: "+score;
-            verifReponse =VerifReponse(checkedButton);
-            labelTest.Text = listeQuestions[indice].ReponseCorrect[0].ToString() + " score: " + score+" checkedButton: "+checkedButton;
+        
+            foreach(RadioButton RB in grpBox_1.Controls)
+            {
+                if (RB.Checked == true)
+                {
+                    verifReponse = RB.TabIndex;
+                }
+            }
             ReponseCorrecte(verifReponse);
-            
 
             if (indice<=17)
             {
@@ -53,35 +56,22 @@ namespace Questionnaire
                 indice++;
                 lbl_Question.Text = "Question " + indice + "/20";
             }
+
             else
             {
                 FinPartie form = new FinPartie();
                 form.ShowDialog();
             }
         }
-
-        public int VerifReponse(RadioButton checkedButton)
-        {
-            if (checkedButton== radBtn_Rep1)
-            {
-                return 1;
-            }
-            else if (checkedButton == radBtn_Rep2)
-            {
-                return 2;
-            }
-            else if (checkedButton == radBtn_Rep3)
-            {
-                return 2;
-            }
-            return 0;
-        }
         public void ReponseCorrecte(int verifReponse)
         {
-            if(verifReponse == listeQuestions[indice].ReponseCorrect[0])
+          labelTest.Text = "Reponse correcte: " + listeQuestions[indice].ReponseCorrect[0] + " score: " + score + " checkedButton: " + verifReponse;
+           
+            if (verifReponse == listeQuestions[indice].ReponseCorrect[0])
             {
                 score += 1;
             }
+            //Déterminer les questions qui sont plus difficiles score +=2
         }
     }
 }
