@@ -57,6 +57,7 @@
             this.grpBox_1.Controls.Add(this.radBtn_Rep3);
             this.grpBox_1.Controls.Add(this.radBtn_Rep2);
             this.grpBox_1.Controls.Add(this.radBtn_Rep1);
+            this.grpBox_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBox_1.Location = new System.Drawing.Point(16, 107);
             this.grpBox_1.Name = "grpBox_1";
             this.grpBox_1.Size = new System.Drawing.Size(740, 145);
@@ -69,7 +70,7 @@
             this.radBtn_Rep3.AutoSize = true;
             this.radBtn_Rep3.Location = new System.Drawing.Point(33, 113);
             this.radBtn_Rep3.Name = "radBtn_Rep3";
-            this.radBtn_Rep3.Size = new System.Drawing.Size(31, 17);
+            this.radBtn_Rep3.Size = new System.Drawing.Size(33, 20);
             this.radBtn_Rep3.TabIndex = 3;
             this.radBtn_Rep3.TabStop = true;
             this.radBtn_Rep3.Text = "3";
@@ -80,7 +81,7 @@
             this.radBtn_Rep2.AutoSize = true;
             this.radBtn_Rep2.Location = new System.Drawing.Point(33, 70);
             this.radBtn_Rep2.Name = "radBtn_Rep2";
-            this.radBtn_Rep2.Size = new System.Drawing.Size(31, 17);
+            this.radBtn_Rep2.Size = new System.Drawing.Size(33, 20);
             this.radBtn_Rep2.TabIndex = 2;
             this.radBtn_Rep2.TabStop = true;
             this.radBtn_Rep2.Text = "2";
@@ -91,7 +92,7 @@
             this.radBtn_Rep1.AutoSize = true;
             this.radBtn_Rep1.Location = new System.Drawing.Point(33, 29);
             this.radBtn_Rep1.Name = "radBtn_Rep1";
-            this.radBtn_Rep1.Size = new System.Drawing.Size(31, 17);
+            this.radBtn_Rep1.Size = new System.Drawing.Size(33, 20);
             this.radBtn_Rep1.TabIndex = 1;
             this.radBtn_Rep1.TabStop = true;
             this.radBtn_Rep1.Text = "1";
@@ -110,7 +111,7 @@
             // labelModifier
             // 
             this.labelModifier.AutoSize = true;
-            this.labelModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelModifier.Location = new System.Drawing.Point(137, 48);
             this.labelModifier.Name = "labelModifier";
             this.labelModifier.Size = new System.Drawing.Size(73, 18);

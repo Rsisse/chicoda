@@ -66,6 +66,7 @@
             // 
             // buttonRecommencer
             // 
+            this.buttonRecommencer.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonRecommencer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRecommencer.Location = new System.Drawing.Point(103, 158);
             this.buttonRecommencer.Name = "buttonRecommencer";
@@ -73,6 +74,7 @@
             this.buttonRecommencer.TabIndex = 3;
             this.buttonRecommencer.Text = "Recommencer";
             this.buttonRecommencer.UseVisualStyleBackColor = true;
+            this.buttonRecommencer.Click += new System.EventHandler(this.buttonRecommencer_Click);
             // 
             // buttonQuitter
             // 
@@ -83,6 +85,7 @@
             this.buttonQuitter.TabIndex = 4;
             this.buttonQuitter.Text = "Quitter";
             this.buttonQuitter.UseVisualStyleBackColor = true;
+            this.buttonQuitter.Click += new System.EventHandler(this.buttonQuitter_Click);
             // 
             // FinPartie
             // 

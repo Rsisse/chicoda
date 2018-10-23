@@ -16,7 +16,7 @@ namespace Questionnaire
     {
         //git add * git commit -m '...' git push -u origin master
         private List<Question> listeQuestions;
-        private int score = 0;
+        public int score = 0;
         int verifReponse=0;
         private int indice = 1;
         private Random r;
@@ -37,8 +37,8 @@ namespace Questionnaire
 
         private void buttonValider_Click(object sender, EventArgs e)
         {
-        
-            foreach(RadioButton RB in grpBox_1.Controls)
+            
+                foreach (RadioButton RB in grpBox_1.Controls)
             {
                 if (RB.Checked == true)
                 {
@@ -47,7 +47,7 @@ namespace Questionnaire
             }
             ReponseCorrecte(verifReponse);
 
-            if (indice<=17)
+            if (indice<17)
             {
                 labelModifier.Text = listeQuestions[indice].Ennonce;
                 radBtn_Rep1.Text = listeQuestions[indice].Reponses[0];
@@ -59,13 +59,24 @@ namespace Questionnaire
 
             else
             {
-                FinPartie form = new FinPartie();
-                form.ShowDialog();
+                FinPartie form = new FinPartie(score);
+                
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    form.Close();
+                    Application.Restart();
+                    
+                }
+                else
+                {
+                    this.Close();
+                } 
+
             }
         }
         public void ReponseCorrecte(int verifReponse)
         {
-          labelTest.Text = "Reponse correcte: " + listeQuestions[indice].ReponseCorrect[0] + " score: " + score + " checkedButton: " + verifReponse;
+          //labelTest.Text = "Reponse correcte: " + listeQuestions[indice].ReponseCorrect[0] + " score: " + score + " checkedButton: " + verifReponse;
            
             if (verifReponse == listeQuestions[indice].ReponseCorrect[0])
             {

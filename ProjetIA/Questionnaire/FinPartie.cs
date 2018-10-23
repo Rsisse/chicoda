@@ -12,9 +12,22 @@ namespace Questionnaire
 {
     public partial class FinPartie : Form
     {
-        public FinPartie()
+        private int score;
+        public FinPartie(int score)
         {
+            this.score = score;
             InitializeComponent();
+            labelScore.Text = score.ToString();
+        }
+
+        private void buttonRecommencer_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonQuitter_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
