@@ -67,7 +67,7 @@ namespace Questionnaire
         {
           labelTest.Text = "Reponse correcte: " + listeQuestions[indice].ReponseCorrect[0] + " score: " + score + " checkedButton: " + verifReponse;
            
-            if (verifReponse == listeQuestions[indice].ReponseCorrect[0])
+            if (verifReponse.Equals(Convert.ToInt32(listeQuestions[indice].ReponseCorrect)))
             {
                 score += 1;
             }
