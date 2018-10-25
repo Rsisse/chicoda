@@ -11,3 +11,8 @@ H:\2A\IA\Projet\ProjetChicoda\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.pdb
 H:\2A\IA\Projet\ProjetChicoda\chicoda\ProjetIA\TestXML\bin\Debug\TestXML.exe
 H:\2A\IA\Projet\ProjetChicoda\chicoda\ProjetIA\TestXML\bin\Debug\TestXML.pdb
 H:\2A\IA\Projet\ProjetChicoda\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.csprojResolveAssemblyReference.cache
+H:\Année 2\IA\chicoda\ProjetIA\TestXML\bin\Debug\TestXML.exe.config
+H:\Année 2\IA\chicoda\ProjetIA\TestXML\bin\Debug\TestXML.exe
+H:\Année 2\IA\chicoda\ProjetIA\TestXML\bin\Debug\TestXML.pdb
+H:\Année 2\IA\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.exe
+H:\Année 2\IA\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.pdb
