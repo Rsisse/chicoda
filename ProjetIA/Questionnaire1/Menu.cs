@@ -26,8 +26,8 @@ namespace Questionnaire1
         {
             this.Hide();
             MainForm form = new MainForm();
-            form.ShowDialog();
-
+            form.Show();
+            
         }
     }
 }

@@ -30,8 +30,7 @@ namespace Questionnaire1
             radBtn_Rep1.Text = listeQuestions[0].Reponses[0];
             radBtn_Rep2.Text = listeQuestions[0].Reponses[1];
             radBtn_Rep3.Text = listeQuestions[0].Reponses[2];
-            labelTest.Text = listeQuestions[indice].ReponseCorrect[0].ToString() + " score: " + score + " checkedButton: " + verifReponse;
-            lbl_Question.Text = "Question "+indice+"/20";
+            lbl_Question.Text = "Question "+(indice+1)+"/20";
             
         }
 
@@ -54,6 +53,11 @@ namespace Questionnaire1
                 radBtn_Rep1.Text = listeQuestions[indice].Reponses[0];
                 radBtn_Rep2.Text = listeQuestions[indice].Reponses[1];
                 radBtn_Rep3.Text = listeQuestions[indice].Reponses[2];
+               if (listeQuestions[indice].LienSiImage != "")
+                {
+                    VisualiseurImage image = new VisualiseurImage(listeQuestions[indice].LienSiImage);
+                    image.Show();
+                }
                 indice++;
                 lbl_Question.Text = "Question " + indice + "/20";
                 
@@ -78,7 +82,7 @@ namespace Questionnaire1
         }
         public void ReponseCorrecte(int verifReponse)
         {
-          //labelTest.Text = "Reponse correcte: " + listeQuestions[indice].ReponseCorrect[0] + " score: " + score + " checkedButton: " + verifReponse;
+         
            
             if (verifReponse.Equals(Convert.ToInt32(listeQuestions[indice].ReponseCorrect)))
             {
