@@ -55,7 +55,6 @@
             this.label2.Text = "Ce jeu aura pour but de vous immerger dans un environnement \r\nvirtuel de test des" +
     " connaissances en IA. \r\nCelui-ci vous aidera à enrichir vos connaissances dans c" +
     "e domaine";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -89,7 +88,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Menu";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

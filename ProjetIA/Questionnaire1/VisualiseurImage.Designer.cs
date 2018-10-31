@@ -34,9 +34,10 @@
             // 
             // pictureBox_ImageQuestion
             // 
-            this.pictureBox_ImageQuestion.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox_ImageQuestion.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_ImageQuestion.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox_ImageQuestion.Name = "pictureBox_ImageQuestion";
-            this.pictureBox_ImageQuestion.Size = new System.Drawing.Size(414, 303);
+            this.pictureBox_ImageQuestion.Size = new System.Drawing.Size(440, 330);
             this.pictureBox_ImageQuestion.TabIndex = 0;
             this.pictureBox_ImageQuestion.TabStop = false;
             // 
@@ -47,6 +48,7 @@
             this.ClientSize = new System.Drawing.Size(438, 327);
             this.Controls.Add(this.pictureBox_ImageQuestion);
             this.Name = "VisualiseurImage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "VisualiseurImage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ImageQuestion)).EndInit();
             this.ResumeLayout(false);

@@ -6,7 +6,7 @@
     <reponse2>C’est un algorithme permettant d’effectuer des calculs complexes</reponse2>
     <reponse3>C’est l’ensemble des règles opératoires propres à un calcul suite de règles formelles</reponse3>
     <correct>1</correct>
-    <image>arnaudVolant.bmp</image>
+    <image></image>
   </Question>
   <Question numQuest="2">
     <ennonce>Laquelle de ces affirmations vous semble la plus correcte ?</ennonce>
@@ -14,15 +14,15 @@
     <reponse2>Les techniques de l'IA sont utilisées pour soutenir les interactions avec l'apprenant</reponse2>
     <reponse3>Le rôle des techniques de l'IA dans les didacticiels est de simuler l'intelligence humaine</reponse3>
     <correct>3</correct>
-    <image>test.jpg</image>
+    <image></image>
   </Question>
-   <Question numQuest="3">
+  <Question numQuest="3">
     <ennonce>Par quoi est défini un graphe?</ennonce>
     <reponse1>Des points et des arêtes</reponse1>
     <reponse2>Des sommets et des arêtes</reponse2>
     <reponse3>Des boucles, des sommets et des arêtes</reponse3>
     <correct>2</correct>
-     <image></image>
+    <image></image>
   </Question>
   <Question numQuest="4">
     <ennonce>Que permet l’algorithme de Dijkstra?</ennonce>
@@ -56,13 +56,13 @@
     <correct>1</correct>
     <image></image>
   </Question>
-<Question numQuest="8">
+  <Question numQuest="8">
     <ennonce>Pour le jeu du taquin, quel algorithme est le plus pertinent?</ennonce>
     <reponse1>Il consiste à mesurer la capacité de réflexion d’un ordinateur</reponse1>
     <reponse2>Il consiste à mesurer les performances d’un robot</reponse2>
     <reponse3>Il consiste à mesurer les performances cognitives d’un humain</reponse3>
     <correct>1</correct>
-  <image></image>
+    <image></image>
   </Question>
   <Question numQuest="9">
     <ennonce>Que permet d’identifier une matrice d’adjacence?</ennonce>
@@ -144,29 +144,21 @@
     <correct>2</correct>
     <image></image>
   </Question>
+  <Question numQuest="19">
+    <ennonce>Résoudre : Quel est la 4ème itération suivant l’algorithme développant l’arbre de recherche suivant un parcours en profondeur?</ennonce>
+    <reponse1>F={A,B,C} O={D,E,F,G}</reponse1>
+    <reponse2>F={A,B,D} O={H,I,C,E}</reponse2>
+    <reponse3>F={A,B,D} O={H,I,E,C}</reponse3>
+    <correct>3</correct>
+    <image>arbreRecherche.png</image>
+  </Question>
+  <Question numQuest="20">
+    <ennonce>Quelle matrice d’adjacence correspond à ce graphe orienté</ennonce>
+    <reponse1>[0,1,0,0; 1,0,0,1;0,1,0,1; 0,0,1,0]</reponse1>
+    <reponse2>[0,1,0,0;0,0,0,0;0,1,0,1; 0,0,1,0]</reponse2>
+    <reponse3>[0,1,1,0; 0,0,0,0; 0,1,0,1; 0,0,1,0] </reponse3>
+    <correct>3</correct>
+    <image>matriceAdjacence.png</image>
+  </Question>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
 </Questions>

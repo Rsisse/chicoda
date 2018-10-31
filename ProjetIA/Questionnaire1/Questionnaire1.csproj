@@ -109,11 +109,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\arnaudVolant.bmp" />
+    <Content Include="bin\Debug\arbreRecherche.png" />
+    <Content Include="bin\Debug\matriceAdjacence.png" />
     <Content Include="bin\Debug\Questions.xml">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="bin\Debug\test.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

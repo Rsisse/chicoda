@@ -25,18 +25,20 @@ namespace Questionnaire1
             InitializeComponent();
             r = new Random();
             listeQuestions = Question.CreateListQuestions();
-            listeQuestions = listeQuestions.OrderBy(x => r.Next(0, 5)).ToList();
+            listeQuestions = listeQuestions.OrderBy(x => r.Next(0,10 )).ToList();
             labelModifier.Text = listeQuestions[0].Ennonce;
             radBtn_Rep1.Text = listeQuestions[0].Reponses[0];
             radBtn_Rep2.Text = listeQuestions[0].Reponses[1];
             radBtn_Rep3.Text = listeQuestions[0].Reponses[2];
-            lbl_Question.Text = "Question "+(indice+1)+"/20";
+            indice++;
+            lbl_Question.Text = "Question "+indice+"/20";
+            Menu menu = new Questionnaire1.Menu();
+            menu.Show();
             
         }
 
         private void buttonValider_Click(object sender, EventArgs e)
         {
-            
             foreach (RadioButton RB in grpBox_1.Controls)
             {
                 if (RB.Checked == true)
@@ -44,11 +46,10 @@ namespace Questionnaire1
                     verifReponse = RB.TabIndex;
                 }
             }
-            ReponseCorrecte(verifReponse);
 
-            if (indice<17)
+            if (indice<20)
             {
-                
+                ReponseCorrecte(verifReponse);
                 labelModifier.Text = listeQuestions[indice].Ennonce;
                 radBtn_Rep1.Text = listeQuestions[indice].Reponses[0];
                 radBtn_Rep2.Text = listeQuestions[indice].Reponses[1];
@@ -60,7 +61,6 @@ namespace Questionnaire1
                 }
                 indice++;
                 lbl_Question.Text = "Question " + indice + "/20";
-                
             }
 
             else
@@ -71,19 +71,16 @@ namespace Questionnaire1
                 {
                     form.Close();
                     Application.Restart();
-                    
                 }
                 else
                 {
+                    form.Close();
                     Application.Exit();
                 } 
-
             }
         }
         public void ReponseCorrecte(int verifReponse)
         {
-         
-           
             if (verifReponse.Equals(Convert.ToInt32(listeQuestions[indice].ReponseCorrect)))
             {
                 score += 1;

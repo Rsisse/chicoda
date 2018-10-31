@@ -17,14 +17,13 @@ namespace Questionnaire1
         public VisualiseurImage(string lienImage)
         {
             InitializeComponent();
-            //  pictureBox_ImageQuestion.Image = Image.FromFile(@"Images\a.bmp");
-            
             Image img = Image.FromFile(lienImage);
-            this.Size = img.Size;
+            Size tailleImage = img.Size;
+            tailleImage.Height += 40;
+            tailleImage.Width += 10;
+            this.Size = tailleImage;
             pictureBox_ImageQuestion.Size = img.Size;
             pictureBox_ImageQuestion.Image = img;
-            
-
         }
     }
 }

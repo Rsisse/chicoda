@@ -15,19 +15,12 @@ namespace Questionnaire1
         public Menu()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+           
         }
 
         private void buttonCommencer_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainForm form = new MainForm();
-            form.Show();
-            
+            this.Close();
         }
     }
 }

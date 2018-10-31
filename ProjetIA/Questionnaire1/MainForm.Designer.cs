@@ -36,7 +36,6 @@
             this.labelEnnoncé = new System.Windows.Forms.Label();
             this.labelModifier = new System.Windows.Forms.Label();
             this.buttonValider = new System.Windows.Forms.Button();
-            this.labelTest = new System.Windows.Forms.Label();
             this.grpBox_1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +59,7 @@
             this.grpBox_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBox_1.Location = new System.Drawing.Point(16, 107);
             this.grpBox_1.Name = "grpBox_1";
-            this.grpBox_1.Size = new System.Drawing.Size(740, 145);
+            this.grpBox_1.Size = new System.Drawing.Size(859, 145);
             this.grpBox_1.TabIndex = 1;
             this.grpBox_1.TabStop = false;
             this.grpBox_1.Text = "Réponses";
@@ -130,21 +129,11 @@
             this.buttonValider.UseVisualStyleBackColor = true;
             this.buttonValider.Click += new System.EventHandler(this.buttonValider_Click);
             // 
-            // labelTest
-            // 
-            this.labelTest.AutoSize = true;
-            this.labelTest.Location = new System.Drawing.Point(282, 17);
-            this.labelTest.Name = "labelTest";
-            this.labelTest.Size = new System.Drawing.Size(35, 13);
-            this.labelTest.TabIndex = 5;
-            this.labelTest.Text = "label1";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 316);
-            this.Controls.Add(this.labelTest);
+            this.ClientSize = new System.Drawing.Size(883, 316);
             this.Controls.Add(this.buttonValider);
             this.Controls.Add(this.labelModifier);
             this.Controls.Add(this.labelEnnoncé);
@@ -170,7 +159,6 @@
         private System.Windows.Forms.Label labelEnnoncé;
         private System.Windows.Forms.Label labelModifier;
         private System.Windows.Forms.Button buttonValider;
-        private System.Windows.Forms.Label labelTest;
     }
 }
 
