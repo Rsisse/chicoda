@@ -30,6 +30,11 @@ namespace Questionnaire1
             radBtn_Rep1.Text = listeQuestions[0].Reponses[0];
             radBtn_Rep2.Text = listeQuestions[0].Reponses[1];
             radBtn_Rep3.Text = listeQuestions[0].Reponses[2];
+            if (listeQuestions[0].LienSiImage != "")
+            {
+                VisualiseurImage image = new VisualiseurImage(listeQuestions[indice].LienSiImage);
+                image.Show();
+            }
             indice++;
             lbl_Question.Text = "Question "+indice+"/20";
             Menu menu = new Questionnaire1.Menu();
