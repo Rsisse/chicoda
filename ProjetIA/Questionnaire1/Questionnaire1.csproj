@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Questionnaire1</RootNamespace>
     <AssemblyName>Questionnaire1</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DjikstraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DjikstraForm.Designer.cs">
+      <DependentUpon>DjikstraForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FinPartie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +80,9 @@
     <Compile Include="VisualiseurImage.Designer.cs">
       <DependentUpon>VisualiseurImage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DjikstraForm.resx">
+      <DependentUpon>DjikstraForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FinPartie.resx">
       <DependentUpon>FinPartie.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +124,12 @@
     <Content Include="bin\Debug\Questions.xml">
       <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Pluscourtchemin\Pluscourtchemin\Pluscourtchemin.csproj">
+      <Project>{6f7c0e5c-624a-42b0-87cf-af86c721e2f7}</Project>
+      <Name>Pluscourtchemin</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

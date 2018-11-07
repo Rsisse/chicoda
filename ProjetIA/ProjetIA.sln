@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestXML", "TestXML\TestXML.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questionnaire1", "Questionnaire1\Questionnaire1.csproj", "{BF276A61-6E62-49CB-B50E-BCCBC3B2F191}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluscourtchemin", "..\Pluscourtchemin\Pluscourtchemin\Pluscourtchemin.csproj", "{6F7C0E5C-624A-42B0-87CF-AF86C721E2F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BF276A61-6E62-49CB-B50E-BCCBC3B2F191}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF276A61-6E62-49CB-B50E-BCCBC3B2F191}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF276A61-6E62-49CB-B50E-BCCBC3B2F191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F7C0E5C-624A-42B0-87CF-AF86C721E2F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F7C0E5C-624A-42B0-87CF-AF86C721E2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F7C0E5C-624A-42B0-87CF-AF86C721E2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F7C0E5C-624A-42B0-87CF-AF86C721E2F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
