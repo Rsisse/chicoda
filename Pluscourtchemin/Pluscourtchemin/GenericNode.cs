@@ -9,7 +9,6 @@ namespace Pluscourtchemin
     // pour résoudre un problème particulier en y ajoutant des infos liées au contexte du problème
     abstract public class GenericNode
     {
-       // protected string Name;              // DOIT ETRE UNIQUE POUR CHAQUE genericnode !!
         protected double GCost;               //coût du chemin du noeud initial jusqu'à ce noeud
         protected double HCost;               //estimation heuristique du coût pour atteindre le noeud final
         protected double TotalCost;           //coût total (g+h)
@@ -32,12 +31,6 @@ namespace Pluscourtchemin
         {
             GCost = g;
         }
-
-        public double Estimation()
-        {
-            return HCost;
-        }
-
 
         public double Cout_Total
         {
@@ -70,10 +63,14 @@ namespace Pluscourtchemin
 
         public void calculCoutTotal()
         {
+            HCost = CalculeHCost();
             TotalCost = GCost + HCost;
         }
 
-  
+        public void RecalculeCoutTotal()
+        {
+            TotalCost = GCost + HCost;
+        }
 
         // Méthodes abstrates, donc à surcharger obligatoirement avec override dans une classe fille
         public abstract bool IsEqual(GenericNode N2);
