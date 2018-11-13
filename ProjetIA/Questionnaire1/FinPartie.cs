@@ -22,11 +22,14 @@ namespace Questionnaire1
 
         private void buttonRecommencer_Click(object sender, EventArgs e)
         {
-           
+            this.Close();
+            Application.Restart();
         }
 
         private void buttonQuitter_Click(object sender, EventArgs e)
         {
+            
+                Application.Exit();
             
         }
     }
