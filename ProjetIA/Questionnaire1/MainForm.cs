@@ -17,7 +17,8 @@ namespace Questionnaire1
         //git add * git commit -m '...' git push -u origin master
         private List<Question> listeQuestions;
         public int score = 0;
-        int verifReponse=0;
+        int reponse=0;
+        bool verifReponse;
         private int indice = 0;
         private Random r;
         public MainForm()
@@ -30,6 +31,7 @@ namespace Questionnaire1
             radBtn_Rep1.Text = listeQuestions[0].Reponses[0];
             radBtn_Rep2.Text = listeQuestions[0].Reponses[1];
             radBtn_Rep3.Text = listeQuestions[0].Reponses[2];
+
             if (listeQuestions[0].LienSiImage != "")
             {
                 VisualiseurImage image = new VisualiseurImage(listeQuestions[indice].LienSiImage);
@@ -37,8 +39,6 @@ namespace Questionnaire1
             }
             indice++;
             lbl_Question.Text = "Question "+indice+"/20";
-            Menu menu = new Questionnaire1.Menu();
-            menu.Show();
             
         }
 
@@ -48,49 +48,66 @@ namespace Questionnaire1
             {
                 if (RB.Checked == true)
                 {
-                    verifReponse = RB.TabIndex;
+                    reponse = RB.TabIndex;
                 }
             }
-
-            if (indice<20)
+            if (indice < 20)
             {
-                ReponseCorrecte(verifReponse);
+                verifReponse = ReponseCorrecte(reponse);
+                if (verifReponse)
+                {
+                    labelReponse.Text = "Vous avez choisi la bonne réponse";
+
+                }
+                else
+                {
+                    labelReponse.Text = "Mauvaise réponse";
+                    labelBonneR.Text = "La bonne réponse est la réponse : " + listeQuestions[indice].ReponseCorrect;
+                }
+                buttonValider.Enabled = false;
+            }
+        }
+        public bool ReponseCorrecte(int verifReponse)
+        {
+            if (verifReponse.Equals(Convert.ToInt32(listeQuestions[indice].ReponseCorrect)))
+            {
+                score += 1;
+                return true;
+            }
+            //Déterminer les questions qui sont plus difficiles score +=2
+            return false;
+        }
+
+        private void buttonSuivant_Click(object sender, EventArgs e)
+        {
+            labelBonneR.Text = "";
+            labelReponse.Text = "";
+
+            if (indice < 20)
+            {
+                
                 labelModifier.Text = listeQuestions[indice].Ennonce;
                 radBtn_Rep1.Text = listeQuestions[indice].Reponses[0];
                 radBtn_Rep2.Text = listeQuestions[indice].Reponses[1];
                 radBtn_Rep3.Text = listeQuestions[indice].Reponses[2];
-               if (listeQuestions[indice].LienSiImage != "")
+
+                if (listeQuestions[indice].LienSiImage != "")
                 {
                     VisualiseurImage image = new VisualiseurImage(listeQuestions[indice].LienSiImage);
                     image.Show();
                 }
+
                 indice++;
                 lbl_Question.Text = "Question " + indice + "/20";
+                buttonValider.Enabled = true;
             }
 
             else
             {
                 FinPartie form = new FinPartie(score);
-                
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    form.Close();
-                    Application.Restart();
-                }
-                else
-                {
-                    form.Close();
-                    Application.Exit();
-                } 
+                form.Show();
+
             }
-        }
-        public void ReponseCorrecte(int verifReponse)
-        {
-            if (verifReponse.Equals(Convert.ToInt32(listeQuestions[indice].ReponseCorrect)))
-            {
-                score += 1;
-            }
-            //Déterminer les questions qui sont plus difficiles score +=2
         }
     }
 }

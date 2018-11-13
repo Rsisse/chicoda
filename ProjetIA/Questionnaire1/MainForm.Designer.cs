@@ -36,6 +36,9 @@
             this.labelEnnoncé = new System.Windows.Forms.Label();
             this.labelModifier = new System.Windows.Forms.Label();
             this.buttonValider = new System.Windows.Forms.Button();
+            this.buttonSuivant = new System.Windows.Forms.Button();
+            this.labelReponse = new System.Windows.Forms.Label();
+            this.labelBonneR = new System.Windows.Forms.Label();
             this.grpBox_1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +62,7 @@
             this.grpBox_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBox_1.Location = new System.Drawing.Point(16, 107);
             this.grpBox_1.Name = "grpBox_1";
-            this.grpBox_1.Size = new System.Drawing.Size(859, 145);
+            this.grpBox_1.Size = new System.Drawing.Size(770, 145);
             this.grpBox_1.TabIndex = 1;
             this.grpBox_1.TabStop = false;
             this.grpBox_1.Text = "Réponses";
@@ -119,26 +122,60 @@
             // 
             // buttonValider
             // 
-            this.buttonValider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonValider.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonValider.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonValider.Location = new System.Drawing.Point(329, 256);
+            this.buttonValider.Location = new System.Drawing.Point(373, 258);
             this.buttonValider.Name = "buttonValider";
-            this.buttonValider.Size = new System.Drawing.Size(125, 32);
+            this.buttonValider.Size = new System.Drawing.Size(150, 32);
             this.buttonValider.TabIndex = 4;
             this.buttonValider.Text = "Valider";
             this.buttonValider.UseVisualStyleBackColor = true;
             this.buttonValider.Click += new System.EventHandler(this.buttonValider_Click);
             // 
+            // buttonSuivant
+            // 
+            this.buttonSuivant.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonSuivant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSuivant.Location = new System.Drawing.Point(627, 258);
+            this.buttonSuivant.Name = "buttonSuivant";
+            this.buttonSuivant.Size = new System.Drawing.Size(150, 32);
+            this.buttonSuivant.TabIndex = 5;
+            this.buttonSuivant.Text = "Suivant";
+            this.buttonSuivant.UseVisualStyleBackColor = true;
+            this.buttonSuivant.Click += new System.EventHandler(this.buttonSuivant_Click);
+            // 
+            // labelReponse
+            // 
+            this.labelReponse.AutoSize = true;
+            this.labelReponse.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReponse.Location = new System.Drawing.Point(815, 126);
+            this.labelReponse.Name = "labelReponse";
+            this.labelReponse.Size = new System.Drawing.Size(0, 17);
+            this.labelReponse.TabIndex = 6;
+            // 
+            // labelBonneR
+            // 
+            this.labelBonneR.AutoSize = true;
+            this.labelBonneR.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBonneR.Location = new System.Drawing.Point(815, 153);
+            this.labelBonneR.Name = "labelBonneR";
+            this.labelBonneR.Size = new System.Drawing.Size(0, 15);
+            this.labelBonneR.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 316);
+            this.ClientSize = new System.Drawing.Size(1142, 316);
+            this.Controls.Add(this.labelBonneR);
+            this.Controls.Add(this.labelReponse);
+            this.Controls.Add(this.buttonSuivant);
             this.Controls.Add(this.buttonValider);
             this.Controls.Add(this.labelModifier);
             this.Controls.Add(this.labelEnnoncé);
             this.Controls.Add(this.grpBox_1);
             this.Controls.Add(this.lbl_Question);
+            this.MaximumSize = new System.Drawing.Size(1158, 354);
             this.MinimumSize = new System.Drawing.Size(780, 354);
             this.Name = "MainForm";
             this.Text = "Questionnaire";
@@ -159,6 +196,9 @@
         private System.Windows.Forms.Label labelEnnoncé;
         private System.Windows.Forms.Label labelModifier;
         private System.Windows.Forms.Button buttonValider;
+        private System.Windows.Forms.Button buttonSuivant;
+        private System.Windows.Forms.Label labelReponse;
+        private System.Windows.Forms.Label labelBonneR;
     }
 }
 
