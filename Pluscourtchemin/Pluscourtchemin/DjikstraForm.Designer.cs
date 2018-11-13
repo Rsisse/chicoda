@@ -1,4 +1,4 @@
-﻿namespace Questionnaire1
+﻿namespace Pluscourtchemin
 {
     partial class DjikstraForm
     {

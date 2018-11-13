@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Pluscourtchemin;
 using System.IO;
 
-namespace Questionnaire1
+namespace Pluscourtchemin
 {
     public partial class DjikstraForm : Form
     {
@@ -33,7 +33,7 @@ namespace Questionnaire1
 
         public void InitGraph()
         {
-            StreamReader monStreamReader = new StreamReader("graphe1.txt");
+            StreamReader monStreamReader = new StreamReader("graphe2.txt");
 
             // Lecture du fichier avec un while, évidemment !
             // 1ère ligne : "nombre de noeuds du graphe
@@ -112,21 +112,64 @@ namespace Questionnaire1
             SearchTree g = new SearchTree();
             Node2 N0 = new Node2();
             N0.numero = numinitial;
-            List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
+            g.L_Ouverts.Add(N0);
+            DoubleNode dblNode = g.RechercheNoeudsIntermediaire(N0);
 
-            Node2 N1 = N0;
-            for (int i = 1; i < solution.Count; i++)
+            foreach (var item in dblNode.L_Fermes)
             {
-                Node2 N2 = (Node2)solution[i];
-                listBox1.Items.Add(Convert.ToString(N1.numero)
-                     + "--->" + Convert.ToString(N2.numero)
-                     + "   : " + Convert.ToString(matrice[N1.numero, N2.numero]));
-                N1 = N2;
+                Node2 nF = (Node2)item;
+                txtBox_Closed.Text += nF.numero.ToString();
+                
             }
 
-            g.GetSearchTree(treeView1);
+            foreach (var item in dblNode.L_Ouverts)
+            {
+                Node2 nO = (Node2)item;
+                txtBox_Open.Text += nO.numero.ToString();
+                
+            }
+
+            dblNode = g.RechercheNoeudsIntermediaire(dblNode.L_Ouverts[0]);
+            txtBox_Open.Text = "";
+            txtBox_Closed.Text = "";
+            foreach (var item in dblNode.L_Fermes)
+            {
+                Node2 nF = (Node2)item;
+                txtBox_Closed.Text += nF.numero.ToString();
+            }
+
+            foreach (var item in dblNode.L_Ouverts)
+            {
+                Node2 nO = (Node2)item;
+                txtBox_Open.Text += nO.numero.ToString();
+            }
+
+            dblNode = g.RechercheNoeudsIntermediaire(dblNode.L_Ouverts[0]);
+            txtBox_Open.Text = "";
+            txtBox_Closed.Text = "";
+            foreach (var item in dblNode.L_Fermes)
+            {
+                Node2 nF = (Node2)item;
+                txtBox_Closed.Text += nF.numero.ToString();
+            }
+
+            foreach (var item in dblNode.L_Ouverts)
+            {
+                Node2 nO = (Node2)item;
+                  txtBox_Open.Text += nO.numero.ToString();
+            }
+
+
+
+
+
+
+
+
+
         }
 
-        
+     
+
     }
 }

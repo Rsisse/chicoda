@@ -8,8 +8,9 @@ namespace Pluscourtchemin
 {
     public class SearchTree
     {
-        public List<GenericNode> L_Ouverts;
-        public List<GenericNode> L_Fermes;
+        public List<GenericNode>L_Ouverts = new List<GenericNode>();
+            
+        public List<GenericNode> L_Fermes = new List<GenericNode>();
 
         public int CountInOpenList()
         {
@@ -57,6 +58,9 @@ namespace Pluscourtchemin
             // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
             while (L_Ouverts.Count != 0 && N.EndState() == false)
             {
+
+
+
                 // Le meilleur noeud des ouverts est supposé placé en tête de liste
                 // On le place dans les fermés
                 L_Ouverts.Remove(N);
@@ -78,6 +82,9 @@ namespace Pluscourtchemin
                 }
             }
 
+
+
+
             // A* terminé
             // On retourne le chemin qui va du noeud initial au noeud final sous forme de liste
             // Le chemin est retrouvé en partant du noeud final et en accédant aux parents de manière
@@ -94,6 +101,46 @@ namespace Pluscourtchemin
                 }
             }
             return _LN;
+        }
+
+        public DoubleNode RechercheNoeudsIntermediaire(GenericNode N0)
+        {
+      
+            // Le noeud passé en paramètre est supposé être le noeud initial
+            GenericNode N = N0;
+          //  L_Ouverts.Add(N0);
+            bool test = false;
+            // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
+            while (L_Ouverts.Count != 0 && N.EndState() == false && test==false)
+            {
+
+
+
+                // Le meilleur noeud des ouverts est supposé placé en tête de liste
+                // On le place dans les fermés
+                L_Ouverts.Remove(N);
+                L_Fermes.Add(N);
+
+                // Il faut trouver les noeuds successeurs de N
+                this.MAJSuccesseurs(N);
+                // Inutile de retrier car les insertions ont été faites en respectant l'ordre
+
+                // On prend le meilleur, donc celui en position 0, pour continuer à explorer les états
+                // A condition qu'il existe bien sûr
+                if (L_Ouverts.Count > 0)
+                {
+                    N = L_Ouverts[0];
+                }
+                else
+                {
+                    N = null;
+                }
+                test = true;
+            }
+
+            return new DoubleNode(L_Ouverts, L_Fermes);
+
+           
         }
 
         private void MAJSuccesseurs(GenericNode N)

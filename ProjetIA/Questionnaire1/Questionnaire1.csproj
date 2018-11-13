@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DjikstraForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DjikstraForm.Designer.cs">
-      <DependentUpon>DjikstraForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="FinPartie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,9 +74,6 @@
     <Compile Include="VisualiseurImage.Designer.cs">
       <DependentUpon>VisualiseurImage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DjikstraForm.resx">
-      <DependentUpon>DjikstraForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FinPartie.resx">
       <DependentUpon>FinPartie.cs</DependentUpon>
     </EmbeddedResource>
