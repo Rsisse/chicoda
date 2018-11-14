@@ -113,26 +113,39 @@ namespace Pluscourtchemin
         }
 
         private void btn_Next_Click(object sender, EventArgs e)
-        {   
+        {
             DoubleNode dblNode = g.RechercheNoeudsIntermediaire(N0);
-            lbl_O.Text = "";
-            lbl_F.Text = "";
+           // lbl_O.Text = "";
+         //   lbl_F.Text = "";
             F = "";
             O = "";
             foreach (var item in dblNode.L_Fermes)
             {
                 Node2 nF = (Node2)item;
-                F += nF.numero.ToString();
-                lbl_F.Text = "F{" + F + "}";      
+                F += nF.numero.ToString();  
             }
-
+            
             foreach (var item in dblNode.L_Ouverts)
             {
                 Node2 nO = (Node2)item;
-                O += nO.numero.ToString();
-                lbl_O.Text = "O{" + O + "}";          
+                O += nO.numero.ToString();     
             }
+            if (CheckString(O, F)) // F{0} O {132}
+            {
+            }
+            lbl_O.Text = "O{" + O + "}";
+            lbl_F.Text = "F{" + F + "}";
             N0 = (Node2)dblNode.L_Ouverts[0];
+            txtBox_Closed.Text = "";
+            txtBox_Open.Text = "";
+
+
+        }
+
+        private bool CheckString(string noeudsO,string noeudsF)
+        {
+            if ((txtBox_Closed.Text == noeudsF) && (txtBox_Open.Text == noeudsO)) return true;
+            return false;
         }
     }
 }
