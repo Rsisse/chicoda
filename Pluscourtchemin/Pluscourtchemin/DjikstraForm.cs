@@ -29,6 +29,8 @@ namespace Pluscourtchemin
             O = "0";
             lbl_F.Text = "F{" + F + "}";
             lbl_O.Text = "O{" + O + "}";
+            numinitial = 0;
+            numfinal = 4;
         }
 
         public void InitGraph()
@@ -107,56 +109,66 @@ namespace Pluscourtchemin
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            numinitial = 0;
-            numfinal = 4;
+            
             SearchTree g = new SearchTree();
             Node2 N0 = new Node2();
             N0.numero = numinitial;
             g.L_Ouverts.Add(N0);
             DoubleNode dblNode = g.RechercheNoeudsIntermediaire(N0);
-
+            F = "";
             foreach (var item in dblNode.L_Fermes)
             {
                 Node2 nF = (Node2)item;
-                txtBox_Closed.Text += nF.numero.ToString();
+                F += nF.numero.ToString();
+                lbl_F.Text = "F{" + F + "}";
                 
             }
-
+            O = "";
             foreach (var item in dblNode.L_Ouverts)
             {
                 Node2 nO = (Node2)item;
-                txtBox_Open.Text += nO.numero.ToString();
+                O += nO.numero.ToString();
+                lbl_O.Text = "O{" + O + "}";
                 
             }
-
+            
             dblNode = g.RechercheNoeudsIntermediaire(dblNode.L_Ouverts[0]);
             txtBox_Open.Text = "";
             txtBox_Closed.Text = "";
+            lbl_O.Text = "";
+            lbl_F.Text = "";
+            F = "";
             foreach (var item in dblNode.L_Fermes)
             {
                 Node2 nF = (Node2)item;
-                txtBox_Closed.Text += nF.numero.ToString();
+                F += nF.numero.ToString();
+                lbl_F.Text = "F{" + F + "}";
             }
-
+            O = "";
             foreach (var item in dblNode.L_Ouverts)
             {
                 Node2 nO = (Node2)item;
-                txtBox_Open.Text += nO.numero.ToString();
+                O += nO.numero.ToString();
+                lbl_O.Text = "O{" + O + "}";
             }
 
             dblNode = g.RechercheNoeudsIntermediaire(dblNode.L_Ouverts[0]);
-            txtBox_Open.Text = "";
-            txtBox_Closed.Text = "";
+
+            lbl_O.Text = "";
+            lbl_F.Text = "";
+            F = "";
             foreach (var item in dblNode.L_Fermes)
             {
                 Node2 nF = (Node2)item;
-                txtBox_Closed.Text += nF.numero.ToString();
+                F += nF.numero.ToString();
+                lbl_F.Text = "F{" + F + "}";
             }
-
+            O = "";
             foreach (var item in dblNode.L_Ouverts)
             {
                 Node2 nO = (Node2)item;
-                  txtBox_Open.Text += nO.numero.ToString();
+                O += nO.numero.ToString();
+                lbl_O.Text = "O{" + O + "}";
             }
 
 
