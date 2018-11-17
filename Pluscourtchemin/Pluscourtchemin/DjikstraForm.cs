@@ -132,27 +132,37 @@ namespace Pluscourtchemin
                 Node2 nO = (Node2)item;
                 O += nO.numero.ToString();     
             }
-
+            lbl_InfoReponse.Text = "Bonne réponse";
+            lbl_InfoReponse.ForeColor = Color.Green;
             if (!CheckString(O, F))
             {
                 erreur = true;
+                lbl_InfoReponse.Text = "Mauvaise réponse";
+                lbl_InfoReponse.ForeColor = Color.Red;
             }
 
             lbl_O.Text = "O{" + O + "}";
             lbl_F.Text = "F{" + F + "}";
 
             N0 = (Node2)dblNode.L_Ouverts[0];
-            txtBox_Closed.Text = "";
-            txtBox_Open.Text = "";
+           
             if (N0.numero == numfinal)
             {
+                if (txtBox_Open.Text == "Fin")
+                {
+                    lbl_InfoReponse.Text = "Bonne réponse";
+                    lbl_InfoReponse.ForeColor = Color.Green;
+                }
                 F += numfinal;
                 lbl_F.Text = "F{" + F + "}";
                 lbl_O.Text = "Fin";
                 btn_End.Visible = true;
                 btn_Next.Visible = false;
             }
-            
+            txtBox_Closed.Text = "";
+
+            txtBox_Open.Text = "";
+
         }
 
         private bool CheckString(string noeudsO,string noeudsF)
@@ -167,7 +177,8 @@ namespace Pluscourtchemin
             nO=String.Concat(nO.OrderBy(c => c));
             nF=String.Concat(nF.OrderBy(c => c));
 
-            if (nO == noeudsO && nF == noeudsF) return true;
+            if (nO.Equals(noeudsO) && nF.Equals(noeudsF)) return true;
+
 
             return false;
 
@@ -180,5 +191,7 @@ namespace Pluscourtchemin
             FinPartie fin = new FinPartie(score);
             fin.Show();
         }
+
+        
     }
 }

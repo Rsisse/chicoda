@@ -37,12 +37,11 @@
             this.btn_Next = new System.Windows.Forms.Button();
             this.lbl_F = new System.Windows.Forms.Label();
             this.lbl_O = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.btn_End = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_InfoReponse = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBoxgraphe
@@ -56,14 +55,14 @@
             // 
             // txtBox_Open
             // 
-            this.txtBox_Open.Location = new System.Drawing.Point(336, 437);
+            this.txtBox_Open.Location = new System.Drawing.Point(325, 428);
             this.txtBox_Open.Name = "txtBox_Open";
             this.txtBox_Open.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_Open.TabIndex = 11;
+            this.txtBox_Open.TabIndex = 13;
             // 
             // txtBox_Closed
             // 
-            this.txtBox_Closed.Location = new System.Drawing.Point(338, 385);
+            this.txtBox_Closed.Location = new System.Drawing.Point(325, 390);
             this.txtBox_Closed.Name = "txtBox_Closed";
             this.txtBox_Closed.Size = new System.Drawing.Size(100, 20);
             this.txtBox_Closed.TabIndex = 12;
@@ -72,7 +71,7 @@
             // 
             this.lbl_Open.AutoSize = true;
             this.lbl_Open.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Open.Location = new System.Drawing.Point(256, 380);
+            this.lbl_Open.Location = new System.Drawing.Point(243, 428);
             this.lbl_Open.Name = "lbl_Open";
             this.lbl_Open.Size = new System.Drawing.Size(76, 24);
             this.lbl_Open.TabIndex = 13;
@@ -82,7 +81,7 @@
             // 
             this.lbl_Closed.AutoSize = true;
             this.lbl_Closed.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Closed.Location = new System.Drawing.Point(256, 433);
+            this.lbl_Closed.Location = new System.Drawing.Point(245, 385);
             this.lbl_Closed.Name = "lbl_Closed";
             this.lbl_Closed.Size = new System.Drawing.Size(74, 24);
             this.lbl_Closed.TabIndex = 14;
@@ -101,7 +100,7 @@
             // lbl_F
             // 
             this.lbl_F.AutoSize = true;
-            this.lbl_F.Location = new System.Drawing.Point(175, 216);
+            this.lbl_F.Location = new System.Drawing.Point(257, 318);
             this.lbl_F.Name = "lbl_F";
             this.lbl_F.Size = new System.Drawing.Size(27, 13);
             this.lbl_F.TabIndex = 17;
@@ -110,43 +109,28 @@
             // lbl_O
             // 
             this.lbl_O.AutoSize = true;
-            this.lbl_O.Location = new System.Drawing.Point(296, 216);
+            this.lbl_O.Location = new System.Drawing.Point(401, 318);
             this.lbl_O.Name = "lbl_O";
             this.lbl_O.Size = new System.Drawing.Size(35, 13);
             this.lbl_O.TabIndex = 18;
             this.lbl_O.Text = "O={1}";
             // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(921, 326);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(152, 180);
-            this.treeView1.TabIndex = 19;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(732, 385);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(128, 121);
-            this.listBox1.TabIndex = 20;
-            // 
             // btn_End
             // 
-            this.btn_End.Location = new System.Drawing.Point(246, 262);
+            this.btn_End.Location = new System.Drawing.Point(271, 483);
             this.btn_End.Name = "btn_End";
-            this.btn_End.Size = new System.Drawing.Size(75, 23);
-            this.btn_End.TabIndex = 21;
+            this.btn_End.Size = new System.Drawing.Size(121, 44);
+            this.btn_End.TabIndex = 14;
             this.btn_End.Text = "Fin";
             this.btn_End.UseVisualStyleBackColor = true;
             this.btn_End.Visible = false;
             this.btn_End.Click += new System.EventHandler(this.btn_End_Click);
-
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 56);
+            this.label1.Location = new System.Drawing.Point(22, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(940, 76);
             this.label1.TabIndex = 21;
@@ -162,18 +146,34 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Graph à résoudre";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(398, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(178, 34);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Question 21";
+            // 
+            // lbl_InfoReponse
+            // 
+            this.lbl_InfoReponse.AutoSize = true;
+            this.lbl_InfoReponse.Location = new System.Drawing.Point(623, 385);
+            this.lbl_InfoReponse.Name = "lbl_InfoReponse";
+            this.lbl_InfoReponse.Size = new System.Drawing.Size(0, 13);
+            this.lbl_InfoReponse.TabIndex = 24;
+            // 
             // DjikstraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 463);
+            this.ClientSize = new System.Drawing.Size(1053, 600);
+            this.Controls.Add(this.lbl_InfoReponse);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_End);
-            this.ClientSize = new System.Drawing.Size(1129, 600);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.lbl_O);
             this.Controls.Add(this.lbl_F);
             this.Controls.Add(this.btn_Next);
@@ -199,10 +199,10 @@
         private System.Windows.Forms.Button btn_Next;
         private System.Windows.Forms.Label lbl_F;
         private System.Windows.Forms.Label lbl_O;
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btn_End;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_InfoReponse;
     }
 }
