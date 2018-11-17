@@ -32,6 +32,8 @@ namespace Questionnaire1
             radBtn_Rep2.Text = listeQuestions[0].Reponses[1];
             radBtn_Rep3.Text = listeQuestions[0].Reponses[2];
 
+            buttonSuivant.Enabled = false;
+
             if (listeQuestions[0].LienSiImage != "")
             {
                 VisualiseurImage image = new VisualiseurImage(listeQuestions[indice].LienSiImage);
@@ -57,21 +59,24 @@ namespace Questionnaire1
                 if (verifReponse)
                 {
                     labelReponse.Text = "Vous avez choisi la bonne réponse";
+                    labelReponse.ForeColor = Color.Green;
 
                 }
                 else
                 {
                     labelReponse.Text = "Mauvaise réponse";
+                    labelReponse.ForeColor = Color.Red;
                     labelBonneR.Text = "La bonne réponse est la réponse : " + listeQuestions[indice].ReponseCorrect;
                 }
                 buttonValider.Enabled = false;
             }
+            buttonSuivant.Enabled = true;
         }
         public bool ReponseCorrecte(int verifReponse)
         {
-            if (verifReponse.Equals(Convert.ToInt32(listeQuestions[indice].ReponseCorrect)))
+            if (verifReponse.Equals(Convert.ToInt32(listeQuestions[indice-1].ReponseCorrect)))
             {
-                score += 1;
+                score = score + Convert.ToInt32(listeQuestions[indice-1].ReponseCorrect);
                 return true;
             }
             //Déterminer les questions qui sont plus difficiles score +=2
@@ -100,6 +105,7 @@ namespace Questionnaire1
                 indice++;
                 lbl_Question.Text = "Question " + indice + "/20";
                 buttonValider.Enabled = true;
+                buttonSuivant.Enabled = false;
             }
 
             else

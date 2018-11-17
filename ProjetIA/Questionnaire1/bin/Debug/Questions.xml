@@ -6,6 +6,7 @@
     <reponse2>C’est un algorithme permettant d’effectuer des calculs complexes</reponse2>
     <reponse3>C’est l’ensemble des règles opératoires propres à un calcul suite de règles formelles</reponse3>
     <correct>1</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="2">
@@ -14,6 +15,7 @@
     <reponse2>Les techniques de l'IA sont utilisées pour soutenir les interactions avec l'apprenant</reponse2>
     <reponse3>Le rôle des techniques de l'IA dans les didacticiels est de simuler l'intelligence humaine</reponse3>
     <correct>3</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="3">
@@ -22,6 +24,7 @@
     <reponse2>Des sommets et des arêtes</reponse2>
     <reponse3>Des boucles, des sommets et des arêtes</reponse3>
     <correct>2</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="4">
@@ -30,6 +33,7 @@
     <reponse2>C’est un algorithme permettant de calculer le nombre d'arête d’un graphe</reponse2>
     <reponse3>C’est un algorithme d’identification du plus court chemin</reponse3>
     <correct>3</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="5">
@@ -38,6 +42,7 @@
     <reponse2>Un algorithme permettant d’obtenir une solution approchée à un problème</reponse2>
     <reponse3>Un algorithme comportant le génome de l’algorithme</reponse3>
     <correct>2</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="6">
@@ -46,6 +51,7 @@
     <reponse2>Un algorithme génétique</reponse2>
     <reponse3>Un algorithme de MinMax</reponse3>
     <correct>1</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="7">
@@ -54,6 +60,7 @@
     <reponse2>Il consiste à mesurer les performances d’un robot</reponse2>
     <reponse3>Il consiste à mesurer les performances cognitives d’un humain</reponse3>
     <correct>1</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="8">
@@ -62,6 +69,7 @@
     <reponse2>Il consiste à mesurer les performances d’un robot</reponse2>
     <reponse3>Il consiste à mesurer les performances cognitives d’un humain</reponse3>
     <correct>1</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="9">
@@ -70,6 +78,7 @@
     <reponse2>Identifier tous les poids associés à chaque relation d’un graphe</reponse2>
     <reponse3>Identifier les sens des relations entre les sommets d’un graphe</reponse3>
     <correct>1</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="10">
@@ -78,6 +87,7 @@
     <reponse2>N</reponse2>
     <reponse3>Dépend du cas</reponse3>
     <correct>1</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="11">
@@ -86,6 +96,7 @@
     <reponse2>les techniques fondées sur l'IA ne sont pas valables pour tous les types d'activités</reponse2>
     <reponse3>les didacticiels fondés sur l'IA sont  intrinsèquement meilleurs que les autres</reponse3>
     <correct>1</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="12">
@@ -94,6 +105,7 @@
     <reponse2>minimiser le gain du joueur</reponse2>
     <reponse3>trouver le plus court chemin</reponse3>
     <correct>1</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="13">
@@ -102,6 +114,7 @@
     <reponse2>Dans un jeu intégrant deux joueurs</reponse2>
     <reponse3>Dans un jeu où l’on cherche à identifier des formes</reponse3>
     <correct>1</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="14">
@@ -110,6 +123,7 @@
     <reponse2>La reconnaissance des formes</reponse2>
     <reponse3>Le calcul de surfaces</reponse3>
     <correct>2</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="15">
@@ -118,6 +132,7 @@
     <reponse2>Potentiomètre</reponse2>
     <reponse3>capteur d’altitude et de pression</reponse3>
     <correct>3</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="16">
@@ -126,6 +141,7 @@
     <reponse2>Il ne permet pas de trouver le chemin le plus court</reponse2>
     <reponse3>Il n’est pas utilisable sur des graphes</reponse3>
     <correct>1</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="17">
@@ -134,6 +150,7 @@
     <reponse2>La méthode A*</reponse2>
     <reponse3>La méthode du MinMax</reponse3>
     <correct>2</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="18">
@@ -142,6 +159,7 @@
     <reponse2>De trouver le plus court chemin en prenant en compte le but</reponse2>
     <reponse3>Est équivalent à Dijkstra</reponse3>
     <correct>2</correct>
+    <score>1</score>
     <image></image>
   </Question>
   <Question numQuest="19">
@@ -150,6 +168,7 @@
     <reponse2>F={A,B,D} O={H,I,C,E}</reponse2>
     <reponse3>F={A,B,D} O={H,I,E,C}</reponse3>
     <correct>3</correct>
+    <score>2</score>
     <image>arbreRecherche.png</image>
   </Question>
   <Question numQuest="20">
@@ -158,6 +177,7 @@
     <reponse2>[0,1,0,0;0,0,0,0;0,1,0,1; 0,0,1,0]</reponse2>
     <reponse3>[0,1,1,0; 0,0,0,0; 0,1,0,1; 0,0,1,0] </reponse3>
     <correct>3</correct>
+    <score>2</score>
     <image>matriceAdjacence.png</image>
   </Question>
 

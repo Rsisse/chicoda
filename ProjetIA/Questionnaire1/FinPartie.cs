@@ -12,10 +12,10 @@ namespace Questionnaire1
 {
     public partial class FinPartie : Form
     {
-        private int score;
-        public FinPartie(int score)
+        private float score;
+        public FinPartie(float scoreini)
         {
-            this.score = score;
+            this.score = scoreini*20/23;
             InitializeComponent();
             labelScore.Text = score.ToString();
         }
