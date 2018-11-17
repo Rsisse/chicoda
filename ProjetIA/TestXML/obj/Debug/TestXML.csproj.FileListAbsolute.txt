@@ -16,6 +16,10 @@ H:\Année 2\IA\chicoda\ProjetIA\TestXML\bin\Debug\TestXML.exe
 H:\Année 2\IA\chicoda\ProjetIA\TestXML\bin\Debug\TestXML.pdb
 H:\Année 2\IA\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.exe
 H:\Année 2\IA\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.pdb
+<<<<<<< HEAD
 H:\Année 2\chicoda\ProjetIA\TestXML\bin\Debug\TestXML.exe.config
 H:\Année 2\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.exe
 H:\Année 2\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.pdb
+=======
+H:\Année 2\IA\chicoda\ProjetIA\TestXML\obj\Debug\TestXML.csprojResolveAssemblyReference.cache
+>>>>>>> raph

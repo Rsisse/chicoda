@@ -92,12 +92,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 267);
+            this.ClientSize = new System.Drawing.Size(343, 293);
             this.Controls.Add(this.buttonQuitter);
             this.Controls.Add(this.buttonRecommencer);
             this.Controls.Add(this.labelScore);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelPartieFinie);
+            this.MaximumSize = new System.Drawing.Size(359, 331);
+            this.MinimumSize = new System.Drawing.Size(359, 331);
             this.Name = "FinPartie";
             this.Text = "FinPartie";
             this.ResumeLayout(false);

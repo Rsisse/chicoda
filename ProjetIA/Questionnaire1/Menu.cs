@@ -20,7 +20,9 @@ namespace Questionnaire1
 
         private void buttonCommencer_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            MainForm form = new MainForm();
+            form.Show();
         }
     }
 }

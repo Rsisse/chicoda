@@ -47,8 +47,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 327);
             this.Controls.Add(this.pictureBox_ImageQuestion);
+            this.Location = new System.Drawing.Point(1158, 200);
             this.Name = "VisualiseurImage";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "VisualiseurImage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ImageQuestion)).EndInit();
             this.ResumeLayout(false);

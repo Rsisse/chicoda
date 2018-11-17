@@ -13,17 +13,19 @@ namespace Questionnaire1
         public List<string> Reponses { get; private set; }
 
         public string ReponseCorrect { get; private set; }
+        public string Score { get; private set; }
 
         public string LienSiImage { get; private set; }
 
-        public Question(): this("",new List<string>(),"","") { }
+        //public Question(): this("",new List<string>(),"","") { }
 
 
-        public Question(string ennonce,List<string> reponses,string reponseCorrect,string lienSiImage)
+        public Question(string ennonce,List<string> reponses,string reponseCorrect,string score, string lienSiImage)
         {
             this.Ennonce = ennonce;
             this.Reponses = reponses;
             this.ReponseCorrect = reponseCorrect;
+            this.Score = score;
             this.LienSiImage = lienSiImage;
         }
 
@@ -50,11 +52,12 @@ namespace Questionnaire1
             {
                 var query = from c in xml.Root.Descendants("Question")
                             where (int)c.Attribute("numQuest") == numQuest
-                            select c.Element("ennonce").Value + "." + c.Element("reponse1").Value + "." + c.Element("reponse2").Value + "." + c.Element("reponse3").Value + "." + c.Element("correct").Value + "."+c.Element("image").Value;
+                            select c.Element("ennonce").Value + "." + c.Element("reponse1").Value + "." + c.Element("reponse2").Value + "." + c.Element("reponse3").Value + "." + c.Element("correct").Value +"."+ c.Element("score") + "."+c.Element("image").Value;
 
                 foreach (string name in query)
                 {
                     int courant = 0;
+                    string scoreReponse = "";
                     int nbrPoint = 0;
                     string ennonce = "";
                     string reponseCorrect = "";
@@ -80,7 +83,13 @@ namespace Questionnaire1
                             reponseCorrect = name[i + 1].ToString();
                             nbrPoint++;
                         }
+
                         else if ((name[i] == '.') && (nbrPoint == 4))
+                        {
+                            scoreReponse = name[i + 1].ToString();
+                            nbrPoint++;
+                        }
+                        else if ((name[i] == '.') && (nbrPoint == 5))
                         {
                             for (int y = i+1; y < name.Length; y++)
                             {
@@ -100,7 +109,7 @@ namespace Questionnaire1
                             nbrPoint++;
                         }
                     }
-                    list.Add(new Question(ennonce, reponses, reponseCorrect,lienSiImage));
+                    list.Add(new Question(ennonce, reponses, reponseCorrect,scoreReponse,lienSiImage));
                 }
             }
 
