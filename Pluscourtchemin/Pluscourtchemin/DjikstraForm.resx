@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Dans cette question, il vous sera demander de résoudre un algorithme de Dijkstra. Pour cela un graphe vous est fourni sur votre gauche.
+Pour la résolution, il vous faudra entrer à chaque étape l'ensemble des ouverts et l'ensemble des fermés. 
+Pour vérifier chaque étape, appuyez sur le bouton suivant jusqu'a ce que vous ayez résolu l'algorithme.
+La correction de chaque étape vous sera fournie.</value>
+  </data>
 </root>
