@@ -117,6 +117,7 @@
             // 
             // btn_End
             // 
+            this.btn_End.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_End.Location = new System.Drawing.Point(271, 483);
             this.btn_End.Name = "btn_End";
             this.btn_End.Size = new System.Drawing.Size(121, 44);

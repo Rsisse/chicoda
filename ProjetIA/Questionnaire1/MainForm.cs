@@ -14,16 +14,23 @@ namespace Questionnaire1
 {
     public partial class MainForm : Form
     {
-        //git add * git commit -m '...' git push -u origin master
         private List<Question> listeQuestions;
         public int score = 0;
         int reponse=0;
         bool verifReponse;
         private int indice = 0;
         private Random r;
+        VisualiseurImage image;
         public MainForm()
         {
             InitializeComponent();
+            Menu menu = new Menu();
+            this.Hide();
+            if(menu.ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
+
             r = new Random();
             listeQuestions = Question.CreateListQuestions();
             listeQuestions = listeQuestions.OrderBy(x => r.Next(0,10 )).ToList();
@@ -31,12 +38,12 @@ namespace Questionnaire1
             radBtn_Rep1.Text = listeQuestions[0].Reponses[0];
             radBtn_Rep2.Text = listeQuestions[0].Reponses[1];
             radBtn_Rep3.Text = listeQuestions[0].Reponses[2];
-
+            
             buttonSuivant.Enabled = false;
 
             if (listeQuestions[0].LienSiImage != "")
             {
-                VisualiseurImage image = new VisualiseurImage(listeQuestions[indice].LienSiImage);
+                image = new VisualiseurImage(listeQuestions[indice].LienSiImage);
                 image.Show();
             }
             indice++;
@@ -85,6 +92,10 @@ namespace Questionnaire1
 
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
+            VisualiseurImage f = Application.OpenForms.OfType<VisualiseurImage>().FirstOrDefault();
+            if (f != null)
+                f.Close();
+           
             labelBonneR.Text = "";
             labelReponse.Text = "";
 
@@ -98,7 +109,7 @@ namespace Questionnaire1
 
                 if (listeQuestions[indice].LienSiImage != "")
                 {
-                    VisualiseurImage image = new VisualiseurImage(listeQuestions[indice].LienSiImage);
+                    image = new VisualiseurImage(listeQuestions[indice].LienSiImage);
                     image.Show();
                 }
 
@@ -110,9 +121,13 @@ namespace Questionnaire1
 
             else
             {
-                FinPartie form = new FinPartie(score);
-                form.Show();
-
+                this.Hide();
+                Pluscourtchemin.DjikstraForm form = new Pluscourtchemin.DjikstraForm(score);
+                if(form.ShowDialog() == DialogResult.OK)
+                {
+                    FinPartie formFin = new FinPartie(Pluscourtchemin.DjikstraForm.score);
+                    formFin.Show();
+                }
             }
         }
     }

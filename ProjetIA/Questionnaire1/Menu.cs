@@ -12,17 +12,17 @@ namespace Questionnaire1
 {
     public partial class Menu : Form
     {
+        
         public Menu()
         {
             InitializeComponent();
-           
+            
         }
 
         private void buttonCommencer_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainForm form = new MainForm();
-            form.Show();
+ 
+            this.Close();
         }
     }
 }

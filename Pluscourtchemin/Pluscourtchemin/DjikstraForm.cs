@@ -188,8 +188,7 @@ namespace Pluscourtchemin
         private void btn_End_Click(object sender, EventArgs e)
         {
             if (!erreur) score += 2;
-            FinPartie fin = new FinPartie(score);
-            fin.Show();
+            this.Close();
         }
 
         
