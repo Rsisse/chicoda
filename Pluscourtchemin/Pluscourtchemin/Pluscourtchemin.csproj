@@ -53,6 +53,12 @@
       <DependentUpon>DjikstraForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DoubleNode.cs" />
+    <Compile Include="FinPartie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinPartie.Designer.cs">
+      <DependentUpon>FinPartie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="SearchTree.cs" />
     <EmbeddedResource Include="DjikstraForm.resx">
       <DependentUpon>DjikstraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinPartie.resx">
+      <DependentUpon>FinPartie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

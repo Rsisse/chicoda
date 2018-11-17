@@ -109,9 +109,8 @@ namespace Pluscourtchemin
             // Le noeud passé en paramètre est supposé être le noeud initial
             GenericNode N = N0;
            //L_Ouverts.Add(N0);
-            bool test = false;
             // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
-            while (L_Ouverts.Count != 0 && N.EndState() == false && test==false)
+            if (L_Ouverts.Count != 0 && N.EndState() == false)
             {
 
 
@@ -135,7 +134,7 @@ namespace Pluscourtchemin
                 {
                     N = null;
                 }
-                test = true;
+               
             }
 
             return new DoubleNode(L_Ouverts, L_Fermes);

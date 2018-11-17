@@ -38,6 +38,7 @@
             this.lbl_O = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btn_End = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxgraphe
@@ -124,11 +125,23 @@
             this.listBox1.Size = new System.Drawing.Size(128, 121);
             this.listBox1.TabIndex = 20;
             // 
+            // btn_End
+            // 
+            this.btn_End.Location = new System.Drawing.Point(246, 262);
+            this.btn_End.Name = "btn_End";
+            this.btn_End.Size = new System.Drawing.Size(75, 23);
+            this.btn_End.TabIndex = 21;
+            this.btn_End.Text = "Fin";
+            this.btn_End.UseVisualStyleBackColor = true;
+            this.btn_End.Visible = false;
+            this.btn_End.Click += new System.EventHandler(this.btn_End_Click);
+            // 
             // DjikstraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 463);
+            this.Controls.Add(this.btn_End);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.lbl_O);
@@ -158,5 +171,6 @@
         private System.Windows.Forms.Label lbl_O;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btn_End;
     }
 }

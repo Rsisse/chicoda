@@ -22,7 +22,9 @@ namespace Pluscourtchemin
         static public string O;
         static public SearchTree g;
         static public Node2 N0;
-        public DjikstraForm()
+        static public bool erreur;
+        static public int score;
+        public DjikstraForm(int pScore)
         {
             InitializeComponent();
             InitGraph();
@@ -36,6 +38,8 @@ namespace Pluscourtchemin
             N0 = new Node2();
             N0.numero = numinitial;
             g.L_Ouverts.Add(N0);
+            erreur = false;
+            score = pScore;
         }
 
         public void InitGraph()
@@ -115,8 +119,6 @@ namespace Pluscourtchemin
         private void btn_Next_Click(object sender, EventArgs e)
         {
             DoubleNode dblNode = g.RechercheNoeudsIntermediaire(N0);
-           // lbl_O.Text = "";
-         //   lbl_F.Text = "";
             F = "";
             O = "";
             foreach (var item in dblNode.L_Fermes)
@@ -130,22 +132,53 @@ namespace Pluscourtchemin
                 Node2 nO = (Node2)item;
                 O += nO.numero.ToString();     
             }
-            if (CheckString(O, F)) // F{0} O {132}
+
+            if (!CheckString(O, F))
             {
+                erreur = true;
             }
+
             lbl_O.Text = "O{" + O + "}";
             lbl_F.Text = "F{" + F + "}";
+
             N0 = (Node2)dblNode.L_Ouverts[0];
             txtBox_Closed.Text = "";
             txtBox_Open.Text = "";
-
-
+            if (N0.numero == numfinal)
+            {
+                F += numfinal;
+                lbl_F.Text = "F{" + F + "}";
+                lbl_O.Text = "Fin";
+                btn_End.Visible = true;
+                btn_Next.Visible = false;
+            }
+            
         }
 
         private bool CheckString(string noeudsO,string noeudsF)
         {
-            if ((txtBox_Closed.Text == noeudsF) && (txtBox_Open.Text == noeudsO)) return true;
+            noeudsO = String.Concat(noeudsO.OrderBy(c => c));
+            noeudsF = String.Concat(noeudsF.OrderBy(c => c));
+
+            string nO = txtBox_Open.Text;
+            string nF = txtBox_Closed.Text;
+            
+            
+            nO=String.Concat(nO.OrderBy(c => c));
+            nF=String.Concat(nF.OrderBy(c => c));
+
+            if (nO == noeudsO && nF == noeudsF) return true;
+
             return false;
+
+
+        }
+
+        private void btn_End_Click(object sender, EventArgs e)
+        {
+            if (!erreur) score += 2;
+            FinPartie fin = new FinPartie(score);
+            fin.Show();
         }
     }
 }
