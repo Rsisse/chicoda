@@ -22,8 +22,10 @@ namespace Pluscourtchemin
         static public string O;
         static public SearchTree g;
         static public Node2 N0;
-        static public bool erreur;
+        static public bool erreur1 = false;
+        static public bool erreur2 = false;
         static public int score;
+        static public int indice = 0;
         public DjikstraForm(int pScore)
         {
             InitializeComponent();
@@ -38,7 +40,6 @@ namespace Pluscourtchemin
             N0 = new Node2();
             N0.numero = numinitial;
             g.L_Ouverts.Add(N0);
-            erreur = false;
             score = pScore;
         }
 
@@ -136,7 +137,7 @@ namespace Pluscourtchemin
             lbl_InfoReponse.ForeColor = Color.Green;
             if (!CheckString(O, F))
             {
-                erreur = true;
+                erreur1 = true;
                 lbl_InfoReponse.Text = "Mauvaise réponse";
                 lbl_InfoReponse.ForeColor = Color.Red;
             }
@@ -178,34 +179,59 @@ namespace Pluscourtchemin
             nF=String.Concat(nF.OrderBy(c => c));
 
             if (nO.Equals(noeudsO) && nF.Equals(noeudsF)) return true;
-
-
             return false;
-
-
         }
 
         private void btn_End_Click(object sender, EventArgs e)
         {
-            if (!erreur) score += 2;
-            
-            
+            if (!erreur1) score += 2;
+            groupBox3.Visible = true;
+            groupBox4.Visible = false;
+            fillTree();
         }
 
 
         private void fillTree()
         {
             g.GetSearchTree(treeView1);
+            labelReponseTree.Text = "";
+            labelNoeud.Text = "N" + (indice + 1);
         }
 
         private void buttonValider_Click(object sender, EventArgs e)
         {
-            bool fin = false;
-            groupBox3.Visible = true;
-            if (fin)
+            
+            if (textBoxEntrerNoeud.Text == g.listBonNoeuds[indice])
             {
-                this.Close();
+                labelReponseTree.Text = "Bonne réponse";
+                labelReponseTree.ForeColor = Color.Green;
             }
+            else
+            {
+                labelReponseTree.Text = "Mauvaise réponse, la bonne réponse était:"+g.listBonNoeuds[indice];
+                labelReponseTree.ForeColor = Color.Red;
+                erreur2 = true;
+            }
+            historiqueNoeudsTree.Text += ("N"+(indice+1)+"=" +g.listBonNoeuds[indice]+"\n");
+            textBoxEntrerNoeud.Text = "";
+            indice++;
+            labelNoeud.Text = "N" + (indice + 1);
+
+            if (g.listBonNoeuds.Count == indice)
+            {
+                label4.Visible = false;
+                textBoxEntrerNoeud.Visible = false;
+                labelNoeud.Visible = false;
+                btnEndTree.Visible = true;
+                btn_End.Visible = false;
+            }
+            
+        }
+
+        private void btnEndTree_Click(object sender, EventArgs e)
+        {
+            if (!erreur2) score += 1;
+            this.Close();
         }
     }
 }

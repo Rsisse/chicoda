@@ -12,6 +12,8 @@ namespace Pluscourtchemin
             
         public List<GenericNode> L_Fermes = new List<GenericNode>();
 
+        public List<string> listBonNoeuds = new List<string>();
+
         public int CountInOpenList()
         {
             return L_Ouverts.Count;
@@ -223,26 +225,32 @@ namespace Pluscourtchemin
         // Celui-ci est mis à jour avec les noeuds de la liste des fermés, on ne tient pas compte des ouverts
         public void GetSearchTree( TreeView TV )
         {
+            int indice = 1;
             if (L_Fermes == null) return;
             if (L_Fermes.Count == 0) return;
             
             // On suppose le TreeView préexistant
             TV.Nodes.Clear();
 
-            TreeNode TN = new TreeNode ( L_Fermes[0].ToString() );
+            // TreeNode TN = new TreeNode ( L_Fermes[0].ToString() );
+            listBonNoeuds.Add(L_Fermes[0].ToString());
+            TreeNode TN = new TreeNode("N1");
             TV.Nodes.Add(TN);
-
-            AjouteBranche ( L_Fermes[0], TN );
+            AjouteBranche ( L_Fermes[0], TN,indice );
         }
 
         // AjouteBranche est exclusivement appelée par GetSearchTree; les noeuds sont ajoutés de manière récursive
-        private void AjouteBranche( GenericNode GN, TreeNode TN)
+        private void AjouteBranche( GenericNode GN, TreeNode TN,int indice)
         {
+            
             foreach (GenericNode GNfils in GN.GetEnfants())
             {
-                TreeNode TNfils = new TreeNode(GNfils.ToString());
+                indice++;
+                // TreeNode TNfils = new TreeNode(GNfils.ToString());
+                listBonNoeuds.Add(GNfils.ToString());
+                TreeNode TNfils = new TreeNode("N" + indice);
                 TN.Nodes.Add(TNfils);
-                if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils); 
+                if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils,indice); 
             }
         }
   

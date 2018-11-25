@@ -47,18 +47,23 @@
             this.buttonValider = new System.Windows.Forms.Button();
             this.textBoxEntrerNoeud = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.historiqueNoeudsTree = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.labelReponseTree = new System.Windows.Forms.Label();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.labelNoeud = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.btnEndTree = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBoxgraphe
             // 
             this.listBoxgraphe.FormattingEnabled = true;
-            this.listBoxgraphe.Location = new System.Drawing.Point(35, 349);
+            this.listBoxgraphe.Location = new System.Drawing.Point(31, 264);
             this.listBoxgraphe.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxgraphe.Name = "listBoxgraphe";
             this.listBoxgraphe.Size = new System.Drawing.Size(122, 251);
@@ -153,7 +158,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 331);
+            this.label2.Location = new System.Drawing.Point(23, 246);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 16);
             this.label2.TabIndex = 22;
@@ -172,9 +177,9 @@
             // lbl_InfoReponse
             // 
             this.lbl_InfoReponse.AutoSize = true;
-            this.lbl_InfoReponse.Location = new System.Drawing.Point(623, 385);
+            this.lbl_InfoReponse.Location = new System.Drawing.Point(24, 130);
             this.lbl_InfoReponse.Name = "lbl_InfoReponse";
-            this.lbl_InfoReponse.Size = new System.Drawing.Size(0, 13);
+            this.lbl_InfoReponse.Size = new System.Drawing.Size(0, 15);
             this.lbl_InfoReponse.TabIndex = 24;
             // 
             // groupBox1
@@ -186,7 +191,7 @@
             this.groupBox1.Controls.Add(this.lbl_Open);
             this.groupBox1.Controls.Add(this.btn_Next);
             this.groupBox1.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(266, 417);
+            this.groupBox1.Location = new System.Drawing.Point(25, 61);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(224, 181);
             this.groupBox1.TabIndex = 25;
@@ -197,8 +202,9 @@
             // 
             this.groupBox2.Controls.Add(this.lbl_F);
             this.groupBox2.Controls.Add(this.lbl_O);
+            this.groupBox2.Controls.Add(this.lbl_InfoReponse);
             this.groupBox2.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(574, 417);
+            this.groupBox2.Location = new System.Drawing.Point(333, 61);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 181);
             this.groupBox2.TabIndex = 26;
@@ -207,7 +213,6 @@
             // 
             // buttonValider
             // 
-            this.buttonValider.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonValider.Location = new System.Drawing.Point(407, 255);
             this.buttonValider.Name = "buttonValider";
             this.buttonValider.Size = new System.Drawing.Size(110, 40);
@@ -225,18 +230,56 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnEndTree);
+            this.groupBox3.Controls.Add(this.historiqueNoeudsTree);
+            this.groupBox3.Controls.Add(this.labelReponseTree);
             this.groupBox3.Controls.Add(this.treeView1);
             this.groupBox3.Controls.Add(this.labelNoeud);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.textBoxEntrerNoeud);
             this.groupBox3.Controls.Add(this.buttonValider);
-            this.groupBox3.Location = new System.Drawing.Point(815, 239);
+            this.groupBox3.Location = new System.Drawing.Point(200, 246);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(582, 329);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Arbre";
             this.groupBox3.Visible = false;
+            // 
+            // historiqueNoeudsTree
+            // 
+            this.historiqueNoeudsTree.AutoSize = true;
+            this.historiqueNoeudsTree.Location = new System.Drawing.Point(6, 69);
+            this.historiqueNoeudsTree.Name = "historiqueNoeudsTree";
+            this.historiqueNoeudsTree.Size = new System.Drawing.Size(0, 13);
+            this.historiqueNoeudsTree.TabIndex = 35;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.groupBox2);
+            this.groupBox4.Controls.Add(this.groupBox1);
+            this.groupBox4.Location = new System.Drawing.Point(200, 237);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(564, 354);
+            this.groupBox4.TabIndex = 32;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Djikstra";
+            // 
+            // labelReponseTree
+            // 
+            this.labelReponseTree.AutoSize = true;
+            this.labelReponseTree.Location = new System.Drawing.Point(341, 178);
+            this.labelReponseTree.Name = "labelReponseTree";
+            this.labelReponseTree.Size = new System.Drawing.Size(13, 13);
+            this.labelReponseTree.TabIndex = 34;
+            this.labelReponseTree.Text = "a";
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(64, 69);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(206, 226);
+            this.treeView1.TabIndex = 33;
             // 
             // labelNoeud
             // 
@@ -256,26 +299,29 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Entrez le noeud correspondant à";
             // 
-            // treeView1
+            // btnEndTree
             // 
-            this.treeView1.Location = new System.Drawing.Point(49, 69);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(206, 226);
-            this.treeView1.TabIndex = 33;
+            this.btnEndTree.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnEndTree.Location = new System.Drawing.Point(407, 255);
+            this.btnEndTree.Name = "btnEndTree";
+            this.btnEndTree.Size = new System.Drawing.Size(110, 40);
+            this.btnEndTree.TabIndex = 36;
+            this.btnEndTree.Text = "Fin";
+            this.btnEndTree.UseVisualStyleBackColor = true;
+            this.btnEndTree.Visible = false;
+            this.btnEndTree.Click += new System.EventHandler(this.btnEndTree_Click);
             // 
             // DjikstraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 636);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.lbl_InfoReponse);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(997, 636);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.listBoxgraphe);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Name = "DjikstraForm";
             this.Text = "DjikstraForm";
             this.groupBox1.ResumeLayout(false);
@@ -284,6 +330,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +359,9 @@
         private System.Windows.Forms.Label labelNoeud;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label labelReponseTree;
+        private System.Windows.Forms.Label historiqueNoeudsTree;
+        private System.Windows.Forms.Button btnEndTree;
     }
 }
