@@ -121,6 +121,7 @@
     <value>Dans cette question, il vous sera demander de résoudre un algorithme de Dijkstra. Pour cela un graphe vous est fourni sur votre gauche.
 Pour la résolution, il vous faudra entrer à chaque étape l'ensemble des ouverts et l'ensemble des fermés. 
 Pour vérifier chaque étape, appuyez sur le bouton suivant jusqu'a ce que vous ayez résolu l'algorithme.
-La correction de chaque étape vous sera fournie.</value>
+La correction de chaque étape vous sera fournie.
+Une fois fini, appuyez sur le button "Fin".</value>
   </data>
 </root>

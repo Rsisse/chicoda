@@ -188,9 +188,24 @@ namespace Pluscourtchemin
         private void btn_End_Click(object sender, EventArgs e)
         {
             if (!erreur) score += 2;
-            this.Close();
+            
+            
         }
 
-        
+
+        private void fillTree()
+        {
+            g.GetSearchTree(treeView1);
+        }
+
+        private void buttonValider_Click(object sender, EventArgs e)
+        {
+            bool fin = false;
+            groupBox3.Visible = true;
+            if (fin)
+            {
+                this.Close();
+            }
+        }
     }
 }
