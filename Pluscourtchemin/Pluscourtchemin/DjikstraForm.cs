@@ -117,6 +117,7 @@ namespace Pluscourtchemin
             monStreamReader.Close();
         }
 
+        // a chaque itération on contrôle les entrées de l'utilisateur pour voir si il se trompe ou pas
         private void btn_Next_Click(object sender, EventArgs e)
         {
             DoubleNode dblNode = g.RechercheNoeudsIntermediaire(N0);
@@ -165,7 +166,7 @@ namespace Pluscourtchemin
             txtBox_Open.Text = "";
 
         }
-
+        // fonction qui permet de vérifier que entrées de l'utilisateur, peu importe l'ordre
         private bool CheckString(string noeudsO,string noeudsF)
         {
             noeudsO = String.Concat(noeudsO.OrderBy(c => c));
@@ -185,6 +186,7 @@ namespace Pluscourtchemin
         private void btn_End_Click(object sender, EventArgs e)
         {
             if (!erreur1) score += 2;
+            // on fait apparaitre la deuxième partie de la question
             groupBox3.Visible = true;
             groupBox4.Visible = false;
             fillTree();
@@ -197,7 +199,7 @@ namespace Pluscourtchemin
             labelReponseTree.Text = "";
             labelNoeud.Text = "N" + (indice + 1);
         }
-
+        //on controle la réponse de l'utilisateur pour la deuxième partie 
         private void buttonValider_Click(object sender, EventArgs e)
         {
             
@@ -208,6 +210,7 @@ namespace Pluscourtchemin
             }
             else
             {
+                // si il se trompe on le lui notifie
                 labelReponseTree.Text = "Mauvaise réponse, la bonne réponse était:"+g.listBonNoeuds[indice];
                 labelReponseTree.ForeColor = Color.Red;
                 erreur2 = true;

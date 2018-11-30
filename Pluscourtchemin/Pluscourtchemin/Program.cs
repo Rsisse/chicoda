@@ -16,6 +16,7 @@ namespace Pluscourtchemin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //lancer uniquement le form de la question 21
             Application.Run(new DjikstraForm(49));
         }
     }

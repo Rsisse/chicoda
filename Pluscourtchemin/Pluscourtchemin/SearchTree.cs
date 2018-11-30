@@ -104,7 +104,7 @@ namespace Pluscourtchemin
             }
             return _LN;
         }
-
+        // version modifiée de RechercheSolutionAEtoile qui renvoie les noeuds ouverts et fermé à chaque itération
         public DoubleNode RechercheNoeudsIntermediaire(GenericNode N0)
         {
       

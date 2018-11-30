@@ -7,6 +7,7 @@ using System.Xml.Linq;
 
 namespace Questionnaire1
 {
+    //classe qui permet d'enregistrer les questions et leurs réponses 
     class Question
     {
         public string Ennonce { get; private set; }
@@ -43,7 +44,8 @@ namespace Questionnaire1
             }
             return "Ennoncé: " + Ennonce + "\nLes réponses:\n" + reponses + "Numéro bonne réponse:\n" + ReponseCorrect;
         }
-
+        // permet de désérialiser un fichier XML connu
+        // méthode brute utilisée, peut être améliorer
         public static List<Question> CreateListQuestions()
         {
             List<Question> list = new List<Question>();

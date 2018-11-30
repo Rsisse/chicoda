@@ -29,7 +29,7 @@ namespace Questionnaire1
 
         private void buttonQuitter_Click(object sender, EventArgs e)
         {
-                Application.Exit();
+            Application.Exit();
         }
     }
 }

@@ -30,10 +30,12 @@ namespace Questionnaire1
             {
                 this.Show();
             }
-
-            r = new Random();
+            // on récupère la liste des questions depuis un fichier XML (voir classe Question)
+            r = new Random();    
             listeQuestions = Question.CreateListQuestions();
+            // ordre des questions aléatoires
             listeQuestions = listeQuestions.OrderBy(x => r.Next(0,10 )).ToList();
+            // affichage des questions
             labelModifier.Text = listeQuestions[0].Ennonce;
             radBtn_Rep1.Text = listeQuestions[0].Reponses[0];
             radBtn_Rep2.Text = listeQuestions[0].Reponses[1];
@@ -92,13 +94,14 @@ namespace Questionnaire1
 
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
+            // si il y a une image
             VisualiseurImage f = Application.OpenForms.OfType<VisualiseurImage>().FirstOrDefault();
             if (f != null)
                 f.Close();
            
             labelBonneR.Text = "";
             labelReponse.Text = "";
-
+            //20 = nbr de questions
             if (indice < 20)
             {
                 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Pluscourtchemin
-{
+{   // classe qui permet d'avoir deux listes de noeuds (les ouverts et les fermés)
     public class DoubleNode
     {
         public List<GenericNode> L_Ouverts { get; set; }
